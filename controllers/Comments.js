@@ -48,7 +48,7 @@ export const getComments=async (req,res)=>{
 
     
       if (comments){comments=await Promise.all(comments.map(async comment =>({
-        ...comment.toObject(),user:(await Users.findOne({email:comment.user}))?.name,hasLiked:comment?.likes?.includes(email)
+        ...comment.toObject(),user:(await Users.findOne({email:comment.user}))?.name,email:comment.user,hasLiked:comment?.likes?.includes(email)
       })));}
       res.status(200).send({success:true,comments,isNextAvailable,isPrevAvialble})
 

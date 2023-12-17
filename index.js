@@ -6,8 +6,8 @@ import PostRoutes from './routes/Posts.js';
 import AuthRoutes from './routes/Auth.js';
 import UploadRoutes from './routes/Uploads.js';
 import ProfileRoutes from './routes/Profile.js'
-// const hostname='127.0.0.1';
-const hostname='192.168.1.10';
+const hostname='127.0.0.1';
+// const hostname='192.168.1.10';
 const port=process.env.PORT || 8000;
 //connecting to database
 connectToDataBase();
